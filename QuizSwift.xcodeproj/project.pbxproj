@@ -13,6 +13,10 @@
 		6A281FF2296302B00085443F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A281FF0296302B00085443F /* Main.storyboard */; };
 		6A281FF4296302B20085443F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A281FF3296302B20085443F /* Assets.xcassets */; };
 		6A281FF7296302B20085443F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A281FF5296302B20085443F /* LaunchScreen.storyboard */; };
+		6A281FFF296311770085443F /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A281FFE296311770085443F /* QuizViewController.swift */; };
+		6A2820012963118E0085443F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2820002963118E0085443F /* ResultViewController.swift */; };
+		6A282003296313B70085443F /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A282002296313B70085443F /* Quiz.swift */; };
+		6A282005296313E10085443F /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A282004296313E10085443F /* QuizManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		6A281FF3296302B20085443F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A281FF6296302B20085443F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A281FF8296302B20085443F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A281FFE296311770085443F /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		6A2820002963118E0085443F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		6A282002296313B70085443F /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		6A282004296313E10085443F /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				6A281FEC296302B00085443F /* SceneDelegate.swift */,
 				6A281FEE296302B00085443F /* ViewController.swift */,
 				6A281FF0296302B00085443F /* Main.storyboard */,
+				6A2820002963118E0085443F /* ResultViewController.swift */,
+				6A282002296313B70085443F /* Quiz.swift */,
+				6A282004296313E10085443F /* QuizManager.swift */,
+				6A281FFE296311770085443F /* QuizViewController.swift */,
 				6A281FF3296302B20085443F /* Assets.xcassets */,
 				6A281FF5296302B20085443F /* LaunchScreen.storyboard */,
 				6A281FF8296302B20085443F /* Info.plist */,
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A2820012963118E0085443F /* ResultViewController.swift in Sources */,
 				6A281FEF296302B00085443F /* ViewController.swift in Sources */,
+				6A282003296313B70085443F /* Quiz.swift in Sources */,
+				6A282005296313E10085443F /* QuizManager.swift in Sources */,
 				6A281FEB296302B00085443F /* AppDelegate.swift in Sources */,
 				6A281FED296302B00085443F /* SceneDelegate.swift in Sources */,
+				6A281FFF296311770085443F /* QuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +309,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +318,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rveronezdeveloper.QuizSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +340,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +349,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rveronezdeveloper.QuizSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
